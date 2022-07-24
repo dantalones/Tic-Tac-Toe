@@ -5,24 +5,21 @@
 }
 
 
-/* :root {
-    --goldenrod: goldenrod;
-    --winning-blocks: #2d414b;
-} */
-
-
 body {
-    color: var(goldenrod)
+    color: goldenrod;
 }
+
 
 h1 {
     font-size: 50px;
     text-transform: uppercase;
 }
 
+
 h2 {
     font-size: 30px;
 }
+
 
 .gameContainer {
     padding: 40px;
@@ -31,5 +28,55 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: 37505c;
+    background-color: rgb(58, 92, 55);
+}
+
+
+#board {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+.cell {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: goldenrod;
+    font-size: 100px;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+}
+
+
+.cell:nth-child(3n) {
+    border-right: none;
+}
+.cell:nth-child(6) ~ .cell {
+    border-bottom: none;
+}
+
+div
+.action {
+    margin-top: 25px;
+}
+
+#button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px black;
+    border-color: goldenrod;
+    background-color: rgb(218, 165, 32);
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 1ms transform;
+}
+
+#button:hover {
+    background-color: rgb(198, 150, 30);
 }
